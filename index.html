@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>健言社 100 期會外會報名表</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: #fffaf5;
+            color: #333;
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(255, 122, 0, 0.08);
+            overflow: hidden;
+            border-top: 6px solid #ff7a00;
+        }
+        .header {
+            padding: 20px 20px 10px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            color: #ff7a00;
+            font-size: 22px;
+        }
+        .event-info {
+            background-color: #fff3e6;
+            margin: 15px 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #cc5200;
+        }
+        .event-info p {
+            margin: 5px 0;
+        }
+        .event-info span.label {
+            font-weight: bold;
+        }
+        form {
+            padding: 0 20px 25px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #cc5200;
+        }
+        .note {
+            font-size: 13px;
+            color: #999;
+            font-weight: normal;
+        }
+        input[type="text"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+            appearance: none; 
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #ff7a00;
+            box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.2);
+        }
+        .date-select-group {
+            display: flex;
+            gap: 10px;
+        }
+        .date-select-group select {
+            flex: 1;
+        }
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: #333;
+        }
+        .radio-option input[type="radio"] {
+            margin: 0 8px 0 0;
+            width: 18px;
+            height: 18px;
+            accent-color: #ff7a00;
+        }
+        .submit-btn {
+            width: 100%;
+            background-color: #ff7a00;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .submit-btn:hover {
+            background-color: #e66e00;
+        }
+        .submit-btn:active {
+            background-color: #cc6200;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>健言社 100 期會外會</h1>
+    </div>
+
+    <div class="event-info">
+        <p><span class="label">日期：</span>2026/10/10 (六) 09:00-16:00</p>
+        <p><span class="label">地點：</span>新城風糖休閒園區</p>
+        <p><span class="label">費用：</span>會員 550 / 非會員 700 (含保險)</p>
+    </div>
+
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" placeholder="請輸入真實姓名" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">手機</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="例如: 0912345678" required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_number">身分證字號 <span class="note">(備註：僅供保險投保)</span></label>
+            <input type="text" id="id_number" name="id_number" placeholder="請輸入身分證字號" required>
+        </div>
+
+        <div class="form-group">
+            <label>出生年月日 <span class="note">(備註：僅供保險投保)</span></label>
+            <div class="date-select-group">
+                <select id="birth_year" name="birth_year" required>
+                    <option value="" disabled selected>年份</option>
+                </select>
+                <select id="birth_month" name="birth_month" required>
+                    <option value="" disabled selected>月份</option>
+                </select>
+                <select id="birth_day" name="birth_day" required>
+                    <option value="" disabled selected>日期</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="club">所屬社團</label>
+            <select id="club" name="club" required>
+                <option value="" disabled selected>請選擇下拉社團</option>
+                <option value="諄言社">諄言社</option>
+                <option value="三重社">三重社</option>
+                <option value="三峽社">三峽社</option>
+                <option value="鶯歌社">鶯歌社</option>
+                <option value="竹北社">竹北社</option>
+                <option value="新竹社">新竹社</option>
+                <option value="中壢社">中壢社</option>
+                <option value="湖口社">湖口社</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>餐點</label>
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="meal" value="葷食" required> 葷食
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="meal" value="素食"> 素食
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">送出報名</button>
+    </form>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const yearSelect = document.getElementById('birth_year');
+        const monthSelect = document.getElementById('birth_month');
+        const daySelect = document.getElementById('birth_day');
+        const currentYear = new Date().getFullYear();
+
+        // 產生年份 (1930 到 今年)
+        for (let i = currentYear; i >= 1930; i--) {
+            let option = document.createElement('option');
+            option.value = i;
+            option.text = i + ' 年';
+            yearSelect.appendChild(option);
+        }
+
+        // 產生月份 (1 到 12)
+        for (let i = 1; i <= 12; i++) {
+            let option = document.createElement('option');
+            let formattedMonth = i.toString().padStart(2, '0');
+            option.value = formattedMonth;
+            option.text = formattedMonth + ' 月';
+            monthSelect.appendChild(option);
+        }
+
+        // 產生日期 (1 到 31)
+        for (let i = 1; i <= 31; i++) {
+            let option = document.createElement('option');
+            let formattedDay = i.toString().padStart(2, '0');
+            option.value = formattedDay;
+            option.text = formattedDay + ' 日';
+            daySelect.appendChild(option);
+        }
+    });
+</script>
+
+</body>
+</html>
